@@ -1,7 +1,10 @@
 <template>
-  <h1 v-if="sentence">
-    {{ sentence}}
-  </h1>
+  <div v-if="sentence" class="text-center">
+    <h2>La parola casuale generata è:</h2>
+    <pre class="fs-5">
+     {{ sentence}}
+    </pre>
+  </div>
 </template>
 
 <script>
@@ -31,8 +34,8 @@ export default {
                       // handle error
                       console.log(error);
                     })
-                }
-         }
+            }
+        }
     },
     created(){
        this.generateWords();
@@ -41,6 +44,5 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
 </style>
